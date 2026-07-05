@@ -12,8 +12,10 @@ public enum PipeInvocationType
 
 public record struct PipeGenerationContext(
     string ClassName,
-    PipeInvocationType InHandlerInvocationType,
-    PipeInvocationType OutHandlerInvocationType,
+    bool IsAbstract,
+    PipeInvocationType InInvocationType,
+    PipeInvocationType OutInvocationType,
+    PipeInvocationType FinallyInvocationType,
     bool IsAmbiguous,
     bool NotImplementing,
     Location Location)

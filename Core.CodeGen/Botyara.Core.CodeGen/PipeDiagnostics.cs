@@ -7,7 +7,7 @@ public static class PipeDiagnostics
     private static DiagnosticDescriptor AmbiguousDescriptor => new(
         id: "BOTYARA_ERR_001",
         title: "Ambiguous in/out",
-        messageFormat: "Any handling member can implement in/out only once.",
+        messageFormat: "Any handling member can implement in/out/finally only once.",
         defaultSeverity: DiagnosticSeverity.Error,
         isEnabledByDefault: true,
         category: "Design");
@@ -15,7 +15,7 @@ public static class PipeDiagnostics
     private static DiagnosticDescriptor IsNotImplementingDescriptor => new(
         id: "BOTYARA_WRN_001",
         title: "Is not implementing",
-        messageFormat: "This handling member does not implement in or out.",
+        messageFormat: "This handling member does not implement in/out/finally.",
         defaultSeverity: DiagnosticSeverity.Warning,
         isEnabledByDefault: true,
         category: "Design");
